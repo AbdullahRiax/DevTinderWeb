@@ -134,7 +134,7 @@ const Login = () => {
           <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 to-violet-600 text-3xl shadow-md">
             👩‍💻
           </div>
-          <h2>{isSignup ? "Create your account" : "Welcome back"}</h2>
+          <h2>{isSignup ? "Create your account" : "Welcome"}</h2>
           <p className="text-sm text-base-content/60">
             {isSignup
               ? "Join DevTinder and connect with developers"
