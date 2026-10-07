@@ -1,8 +1,9 @@
 import axios from "axios";
 
-// export const BASE_URL = "http://localhost:3000";
+const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
 
-export const BASE_URL = "http://3.25.161.129/api";
+// Use the address in the browser bar, so the IP site and https://devtinder.net both work.
+export const BASE_URL = isLocal ? "http://localhost:3000" : `${window.location.origin}/api`;
 const api = axios.create({
   baseURL: BASE_URL,
   withCredentials: true,
