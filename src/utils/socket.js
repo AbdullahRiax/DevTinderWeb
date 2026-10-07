@@ -1,11 +1,17 @@
 import { io } from "socket.io-client";
 import { BASE_URL } from "./api.js";
 
+// API calls use /api. Socket.IO must use the site root, or nginx sends it to the wrong place.
+const SOCKET_URL = BASE_URL.replace(/\/api\/?$/, "");
+
 let socket = null;
 
 export const connectSocket = () => {
   if (!socket) {
-    socket = io(BASE_URL, { withCredentials: true });
+    socket = io(SOCKET_URL, {
+      path: "/socket.io",
+      withCredentials: true,
+    });
   }
   return socket;
 };
