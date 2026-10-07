@@ -16,8 +16,8 @@ import { ICONS } from "./icons.jsx";
 const INITIAL_FORM = {
   firstName: "",
   lastName: "",
-  email: "babar@gmail.com",
-  password: "Babar123!",
+  email: "",
+  password: "",
   image: "",
   skills: "",
 };
